@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-corporate-blue: #0f172a;
+  --color-corporate-accent: #1e293b;
+  --color-corporate-light: #f1f5f9;
+  --font-size-xxs: 0.65rem;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 antialiased;
+  }
+
+  /* Condensed font feel for data density */
+  table {
+    @apply text-sm;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-corporate-blue text-white px-4 py-2 rounded hover:bg-corporate-accent transition-colors font-medium text-sm;
+  }
+
+  .btn-secondary {
+    @apply border border-gray-300 text-slate-700 px-3 py-1.5 rounded hover:bg-gray-50 transition-colors text-xs font-medium;
+  }
+
+  .input-field {
+    @apply border border-gray-300 rounded px-3 py-1.5 focus:outline-none focus:border-corporate-blue text-sm w-full;
+  }
+
+  .sidebar-link {
+    @apply block px-4 py-2 text-sm text-slate-600 hover:bg-corporate-light hover:text-corporate-blue transition-colors border-l-2 border-transparent hover:border-corporate-blue;
+  }
+}
