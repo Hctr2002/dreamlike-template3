@@ -8,6 +8,9 @@ import { HomePage } from '../pages/HomePage';
 import { ProductPage } from '../pages/ProductPage';
 import { CartPage } from '../pages/CartPage';
 import { QuotePage } from '../pages/QuotePage';
+import { LoginPage } from '../pages/LoginPage';
+import { RegisterPage } from '../pages/RegisterPage';
+import { DashboardPage } from '../pages/DashboardPage';
 
 export const Layout: React.FC = () => {
     const location = useLocation();
@@ -27,6 +30,9 @@ export const Layout: React.FC = () => {
                         <Route path="/product/:id" element={<ProductPage />} />
                         <Route path="/cart" element={<CartPage />} />
                         <Route path="/quote" element={<QuotePage />} />
+                        <Route path="/login" element={<LoginPage />} />
+                        <Route path="/register" element={<RegisterPage />} />
+                        <Route path="/dashboard" element={<DashboardPage />} />
                     </Routes>
                 </main>
             </div>
